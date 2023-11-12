@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengajuan Loan Baru</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+      }
+      body {
+        background-color: #f6f6f6;
+        font-family: "DM Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      .body {
+        background-color: #f6f6f6;
+        width: 100%;
+      }
+      .container {
+        display: block;
+        margin: 0 auto !important;
+        max-width: 950px;
+        padding: 10px;
+        width: 950px;
+      }
+      .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 950px;
+        padding: 10px;
+      }
+      .main {
+        background: #ffffff;
+        border-radius: 3px;
+        width: 100%;
+      }
+      .wrapper {
+        box-sizing: border-box;
+        padding: 4rem 3rem;
+      }
+      .wrapper .img-full {
+        width: 100%;
+        padding: initial;
+      }
+      .content-block {
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      .box {
+        box-shadow: 0px 0px 2px rgba(136, 136, 136, 0.8);
+        padding: 15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+      }
+      .button {
+        padding: 0 40px;
+        border-radius: 5px;
+        background-color: #5380f3;
+        color: #ffffff;
+        line-height: 2.5;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .button:hover {
+        background-color: #375ec0;
+        color: #fff;
+      }
+
+      .footer {
+        clear: both;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+        color: #999999;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #000000;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize;
+      }
+      p,
+      ul,
+      ol {
+        font-family: "DM Sans", sans-serif;
+        font-weight: normal;
+        margin-bottom: 15px;
+      }
+      p li,
+      ul li,
+      ol li {
+        list-style-position: inside;
+        margin-left: 5px;
+      }
+      a {
+        color: #3498db;
+        text-decoration: underline;
+      }
+      .mt0 {
+        margin-top: 0;
+      }
+      .mb0 {
+        margin-bottom: -5px;
+      }
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+      }
+      .powered-by a {
+        text-decoration: none;
+      }
+      hr {
+        border: 0;
+        border-bottom: 1px solid #7e7e7e;
+        margin: 20px 0;
+      }
+
+      @media only screen and (max-width: 620px) {
+        table.body h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important;
+        }
+        table.body p,
+        table.body ul,
+        table.body ol,
+        table.body td,
+        table.body span,
+        table.body a {
+          font-size: 16px !important;
+        }
+        table.body .wrapper,
+        table.body .article {
+          padding: 10px !important;
+        }
+        table.body .content {
+          padding: 0 !important;
+        }
+        table.body .container {
+          padding: 0 !important;
+          width: 100% !important;
+        }
+        table.body .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+        table.body .btn table {
+          width: 100% !important;
+        }
+        table.body .btn a {
+          width: 100% !important;
+        }
+        table.body .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important;
+        }
+      }
+
+      @media all {
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+        #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+        .btn-primary table td:hover {
+          background-color: #34495e !important;
+        }
+        .btn-primary a:hover {
+          background-color: #34495e !important;
+          border-color: #34495e !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table role="presentation" cellpadding="0" cellspacing="0" class="body">
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="content">
+            <table role="presentation" class="main">
+              <tr>
+                <td class="wrapper">
+                  <div class="text-center">
+                    <img
+                      src="https://i.ibb.co/m0F7yp1/LOGO-PINJAM-MODAL-1-2.png"
+                      alt=""
+                      width="250"
+                    />
+                  </div>
+                  <img
+                    src="https://i.ibb.co/HzXb8Cz/Pengajuan-Berhasil-01-1-1.png"
+                    alt=""
+                    class="img-full py-4"
+                  />
+                  <h2 class="fw-bold text-start">
+                    Permintaan pembiayaan Anda telah berhasil kami cairkan ke
+                    Supplier
+                  </h2>
+                  <p>
+                    Hi {pelanggan}, Terimakasih telah mempercayakan Pinjam Modal
+                    untuk pembiayaan pembelian ke Supplier. Berikut rincian
+                    pencairan yang kami lakukan ke Supplier!
+                  </p>
+                  <div class="box">
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Bank Pengirim</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">CIMB NIAGA</p>
+                      </div>
+                    </div>
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Bank Penerima</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">Bank Central Asia</p>
+                      </div>
+                    </div>
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Nama Rekening penerima</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">PT. Jaya Raya Sejati</p>
+                      </div>
+                    </div>
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Nomor Rekening penerima</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">467676767612</p>
+                      </div>
+                    </div>
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Tanggal Pencairan</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">13 Juni 2023, 09.12.12</p>
+                      </div>
+                    </div>
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Nominal Pencairan</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">2.000.000.000</p>
+                      </div>
+                    </div>
+                    <div class="row mb0">
+                      <div class="col-md-4 col">
+                        <p>Loan ID</p>
+                      </div>
+                      <div class="col-md-4 col">
+                        <p class="fw-bold">14412</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Email ini hanya dikirimkan kepada {Nama Pelanggan}. Anda
+                    dapat melakukan download bukti pencairan dan mengirimkan
+                    kepada supplier sebagai bukti pencairan dari Pinjam Modal.
+                  </p>
+                  <div class="text-center mt-5">
+                    <button type="button" class="btn button mb-3">
+                      Download Bukti Pencairan
+                    </button>
+                  </div>
+                  <hr />
+                  <div class="text-center">
+                    <p class="my-5">
+                      Untuk informasi lebih lanjut. Anda dapat menghubungi
+                      customer support kami melalui email
+                      <span>
+                        <a href="" style="color: #0d98fd">
+                          customer@pinjammodal.id
+                        </a>
+                      </span>
+                    </p>
+                    <h4 class="text-secondary fw-bold">#MakeImpactForOthers</h4>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
